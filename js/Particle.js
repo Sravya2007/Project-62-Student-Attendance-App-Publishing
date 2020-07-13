@@ -1,14 +1,11 @@
 class Particle {
     constructor(x,y,radius) {
       var options = {
-        'isStatic': false,
-        'friction': 0,
-        'density': 0.8,
-        'restitution': 1
+        restitution: 0.4
       }
+      this.radius = radius;
       this.body = Bodies.circle(x, y, radius, options);
       this.color = color(random(0, 255), random(0, 255), random(0, 255));
-      this.radius = 10;
       World.add(world, this.body);
     }
     display(){
